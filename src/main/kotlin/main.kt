@@ -79,7 +79,7 @@ fun main() {
             val timeValue = currentTimeMillis - startTime
             val xPosition = 0.9f * cos(timeValue.toFloat() / 1000)
             GL20.glUniform2f(positionUniformLocation, xPosition, 0f)
-            GL20.glUniform4f(colorUniformLocation, 1f, 0f, 0f, 1f)
+            GL20.glUniform4f(colorUniformLocation, 1f, 0.2f, 0f, 1f)
             glDrawElements(GL_TRIANGLES, quadIndices.size, GL_UNSIGNED_INT, 0)
             glBindVertexArray(0)
             glUseProgram(0)

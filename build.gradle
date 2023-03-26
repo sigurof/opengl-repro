@@ -5,6 +5,7 @@ buildscript {
 }
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.8.0'
+    id 'application'
 }
 
 repositories{
@@ -21,6 +22,12 @@ version '1.0-SNAPSHOT'
 project.ext.lwjglVersion = "3.2.3"
 project.ext.lwjglNatives = "natives-windows"
 project.ext.jomlVersion = "1.9.19"
+
+// Shadow task depends on Jar task, so these configs are reflected for Shadow as well
+application {
+    mainClass = 'MainKt'
+}
+
 
 
 dependencies {
